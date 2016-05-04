@@ -6,15 +6,16 @@
  *
  **/
 var Defer = function(){
+    var callback;
     return {
         //成功之后调用的方法
-        resolve:function(){
-
+        resolve:function(data){
+            callback(data);
         },
         promise:{
             //用来注册成功之后的回调
             then:function(_callback){
-
+                callback = _callback;
             }
         }
 
@@ -28,6 +29,7 @@ var promise = defer.promise;
 promise.then(function(data){
     console.log(data);
 });
+defer.resolve('桌子');
 
 /**
  * 1. 顾客下单
