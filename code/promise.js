@@ -6,7 +6,9 @@
  *
  **/
 var Defer = function(){
+    //暂存的回调函数 成功之后的回调
     var callback;
+    //返回一个defer对象
     return {
         //成功之后调用的方法
         resolve:function(data){
