@@ -1,3 +1,1 @@
-/**
- * zhangrenyang
- */
+console.log('test.tmp.js');
